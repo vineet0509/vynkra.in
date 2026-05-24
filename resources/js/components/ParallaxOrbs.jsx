@@ -27,6 +27,7 @@ export default function ParallaxOrbs() {
       <div className="glow-orb orb-1" id="orb1"></div>
       <div className="glow-orb orb-2" id="orb2"></div>
       <div className="glow-orb orb-3" id="orb3"></div>
+      <div className="glow-orb orb-4" id="orb4"></div>
     </>
   );
 }
