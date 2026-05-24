@@ -159,7 +159,7 @@ export default function Landing() {
                         <div className="db-icon">⚽</div>
                         <span>TurfBook Scheduler</span>
                       </div>
-                      <span className="db-status status-soon">Coming Soon</span>
+                      <span className="db-status status-active">Active</span>
                     </div>
                     <div className="chart-mock">
                       <span className="chart-bar"></span>
@@ -257,14 +257,14 @@ export default function Landing() {
                   e.preventDefault();
                   document.querySelector('#sandbox')?.scrollIntoView({ behavior: 'smooth' });
                 }}>Test Local Build</a>
-                <a href="/hardware-shop-manager/public" target="_blank" className="btn btn-secondary btn-sm">Direct Launch</a>
+                <a href="https://hardwarepro.vynkra.in" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-sm">Direct Launch</a>
               </div>
             </div>
             
             {/* Project 2: TurfBook */}
             <div className="glass-panel project-card">
               <div>
-                <span className="project-tag tag-soon">Coming Soon</span>
+                <span className="project-tag tag-active">Active Environment</span>
                 <h3 className="project-title">TurfBook Reservation Platform</h3>
                 <p className="project-description">A modern, multi-tenant stadium and sports turf booking engine. Simplify scheduling, match slot allocations, digital wallet settlements, and arena vendor dashboards in one central ecosystem.</p>
                 
@@ -293,7 +293,7 @@ export default function Landing() {
                   e.preventDefault();
                   document.querySelector('#sandbox')?.scrollIntoView({ behavior: 'smooth' });
                 }}>Test Local Build</a>
-                <a href="/turfbook/public" target="_blank" className="btn btn-secondary btn-sm">Direct Launch</a>
+                <a href="https://turfbook.vynkra.in" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-sm">Direct Launch</a>
               </div>
             </div>
           </div>
@@ -311,10 +311,10 @@ export default function Landing() {
                   Developer Testing Suite
                 </span>
                 <h3>Test Our <span className="gradient-text">Laravel React</span> Applications</h3>
-                <p>Vynkra applications are running live on your local server. Utilize the hotlinks below to interact with the development environments, explore database structures, check layouts, and try simulated booking and checkout systems.</p>
+                <p>Vynkra applications are running live on our cloud production systems and local developer servers. Use the links below to test both systems in real time.</p>
                 <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                  <span style={{ fontSize: '0.8rem', padding: '4px 10px', borderRadius: '5px', background: 'rgba(99,102,241,0.1)', color: 'var(--primary)', fontWeight: 700 }}>Stack</span>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Laravel API + Inertia JS + React 18 + MySQL</span>
+                  <span style={{ fontSize: '0.8rem', padding: '4px 10px', borderRadius: '5px', background: 'rgba(99,102,241,0.1)', color: 'var(--primary)', fontWeight: 700 }}>Environment</span>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Production Subdomains + Local Sandbox Portals</span>
                 </div>
               </div>
               
@@ -329,8 +329,8 @@ export default function Landing() {
                     </div>
                   </div>
                   <div className="test-options">
-                    <a href="/hardware-shop-manager/public" target="_blank" className="btn btn-primary btn-sm test-btn">Launch App</a>
-                    <a href="/hardware-shop-manager" target="_blank" style={{ fontSize: '0.75rem', textDecoration: 'underline', textAlign: 'center', color: 'var(--text-secondary)' }}>View Root Directory</a>
+                    <a href="https://hardwarepro.vynkra.in" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm test-btn">Launch Live App</a>
+                    <a href="/hardware-shop-manager/public" target="_blank" style={{ fontSize: '0.75rem', textDecoration: 'underline', textAlign: 'center', color: 'var(--text-secondary)' }}>Launch Local Build</a>
                   </div>
                 </div>
                 
@@ -344,8 +344,8 @@ export default function Landing() {
                     </div>
                   </div>
                   <div className="test-options">
-                    <a href="/turfbook/public" target="_blank" className="btn btn-cyan btn-sm test-btn" style={{ marginBottom: '4px' }}>Launch TurfBook</a>
-                    <a href="/turfbooknew/public" target="_blank" style={{ fontSize: '0.75rem', textDecoration: 'underline', textAlign: 'center', color: 'var(--text-secondary)' }}>Launch Backup Env</a>
+                    <a href="https://turfbook.vynkra.in" target="_blank" rel="noopener noreferrer" className="btn btn-cyan btn-sm test-btn" style={{ marginBottom: '4px' }}>Launch Live App</a>
+                    <a href="/turfbook/public" target="_blank" style={{ fontSize: '0.75rem', textDecoration: 'underline', textAlign: 'center', color: 'var(--text-secondary)' }}>Launch Local Build</a>
                   </div>
                 </div>
               </div>
