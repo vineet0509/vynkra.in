@@ -56,14 +56,12 @@ export default function Footer() {
               {location.pathname === '/' ? (
                 <>
                   <a href="#blogs" onClick={() => handleLinkClick('#blogs')}>Tech Blogs</a>
-                  <a href="#careers" onClick={() => handleLinkClick('#careers')}>Careers Lab</a>
                   <a href="#contact" onClick={() => handleLinkClick('#contact')}>Contact Hub</a>
                   <a href="#sandbox" onClick={() => handleLinkClick('#sandbox')}>Developer Sandboxes</a>
                 </>
               ) : (
                 <>
                   <Link to="/#blogs">Tech Blogs</Link>
-                  <Link to="/#careers">Careers Lab</Link>
                   <Link to="/#contact">Contact Hub</Link>
                   <Link to="/#sandbox">Developer Sandboxes</Link>
                 </>

@@ -2,31 +2,19 @@ import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ParallaxOrbs from '../components/ParallaxOrbs';
+import { BarChart3, Activity, Check, Settings, Zap, Lock, Mail, MapPin } from 'lucide-react';
 
 export default function Landing() {
-  // Accordion state
-  const [expandedCareer, setExpandedCareer] = useState(null);
-
-  // Modal state
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [jobApplied, setJobApplied] = useState('');
-
   // Toast notification state
   const [toast, setToast] = useState({ active: false, title: '', desc: '' });
 
   // Form loading states
   const [isContactSubmitting, setIsContactSubmitting] = useState(false);
-  const [isApplySubmitting, setIsApplySubmitting] = useState(false);
 
   // Form input states
   const [contactName, setContactName] = useState('');
   const [contactEmail, setContactEmail] = useState('');
   const [contactMessage, setContactMessage] = useState('');
-
-  const [applicantName, setApplicantName] = useState('');
-  const [applicantEmail, setApplicantEmail] = useState('');
-  const [applicantGithub, setApplicantGithub] = useState('');
-  const [applicantPitch, setApplicantPitch] = useState('');
 
   // Auto-scroll to hash location if available on mount
   useEffect(() => {
@@ -49,30 +37,6 @@ export default function Landing() {
     }, 5000);
   };
 
-  const handleCareerToggle = (careerId) => {
-    if (expandedCareer === careerId) {
-      setExpandedCareer(null);
-    } else {
-      setExpandedCareer(careerId);
-    }
-  };
-
-  const openApplyModal = (jobTitle) => {
-    setJobApplied(jobTitle);
-    setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeApplyModal = () => {
-    setIsModalOpen(false);
-    document.body.style.overflow = '';
-    // Reset apply fields
-    setApplicantName('');
-    setApplicantEmail('');
-    setApplicantGithub('');
-    setApplicantPitch('');
-  };
-
   const handleContactSubmit = (e) => {
     e.preventDefault();
     if (!contactName || !contactEmail || !contactMessage) return;
@@ -88,21 +52,6 @@ export default function Landing() {
       setContactEmail('');
       setContactMessage('');
     }, 1200);
-  };
-
-  const handleApplySubmit = (e) => {
-    e.preventDefault();
-    if (!applicantName || !applicantEmail || !applicantPitch) return;
-
-    setIsApplySubmitting(true);
-    setTimeout(() => {
-      setIsApplySubmitting(false);
-      closeApplyModal();
-      triggerToast(
-        'Application Submitted!',
-        `Thank you ${applicantName}. Your profile is submitted for the ${jobApplied} role.`
-      );
-    }, 1500);
   };
 
   return (
@@ -149,14 +98,14 @@ export default function Landing() {
                   <div className="dashboard-body">
                     <div className="db-row">
                       <div className="db-title">
-                        <div className="db-icon">📊</div>
+                        <div className="db-icon"><BarChart3 size={14} /></div>
                         <span>Hardware Manager</span>
                       </div>
                       <span className="db-status status-active">Active</span>
                     </div>
                     <div className="db-row">
                       <div className="db-title">
-                        <div className="db-icon">⚽</div>
+                        <div className="db-icon"><Activity size={14} /></div>
                         <span>TurfBook Scheduler</span>
                       </div>
                       <span className="db-status status-active">Active</span>
@@ -234,19 +183,19 @@ export default function Landing() {
                 
                 <div className="project-features">
                   <div className="feature-item">
-                    <span className="feature-check">✓</span>
+                    <span className="feature-check"><Check size={12} strokeWidth={3} /></span>
                     <span>Complete inventory checkouts & batch barcode listings</span>
                   </div>
                   <div className="feature-item">
-                    <span className="feature-check">✓</span>
+                    <span className="feature-check"><Check size={12} strokeWidth={3} /></span>
                     <span>Dynamic automated invoice and bill generator</span>
                   </div>
                   <div className="feature-item">
-                    <span className="feature-check">✓</span>
+                    <span className="feature-check"><Check size={12} strokeWidth={3} /></span>
                     <span>Interactive sales analysis with custom data displays</span>
                   </div>
                   <div className="feature-item">
-                    <span className="feature-check">✓</span>
+                    <span className="feature-check"><Check size={12} strokeWidth={3} /></span>
                     <span>Multi-user credentials with admin-level configuration controls</span>
                   </div>
                 </div>
@@ -270,19 +219,19 @@ export default function Landing() {
                 
                 <div className="project-features">
                   <div className="feature-item">
-                    <span className="feature-check">✓</span>
+                    <span className="feature-check"><Check size={12} strokeWidth={3} /></span>
                     <span>Interactive stadium visualization & active slot selection</span>
                   </div>
                   <div className="feature-item">
-                    <span className="feature-check">✓</span>
+                    <span className="feature-check"><Check size={12} strokeWidth={3} /></span>
                     <span>Multi-tenant vendor accounts with custom payout systems</span>
                   </div>
                   <div className="feature-item">
-                    <span className="feature-check">✓</span>
+                    <span className="feature-check"><Check size={12} strokeWidth={3} /></span>
                     <span>Dynamic calendar schedule generator & reservation triggers</span>
                   </div>
                   <div className="feature-item">
-                    <span className="feature-check">✓</span>
+                    <span className="feature-check"><Check size={12} strokeWidth={3} /></span>
                     <span>Custom high-contrast compact theme dashboard design</span>
                   </div>
                 </div>
@@ -322,7 +271,7 @@ export default function Landing() {
                 {/* Card 1: Hardware Management */}
                 <div className="test-card">
                   <div className="test-info">
-                    <div className="test-avatar">⚙️</div>
+                    <div className="test-avatar"><Settings size={20} /></div>
                     <div className="test-meta">
                       <h4>Hardware Shop Manager</h4>
                       <p>React Frontend + Sales Suite</p>
@@ -337,7 +286,7 @@ export default function Landing() {
                 {/* Card 2: TurfBook Sandbox */}
                 <div className="test-card">
                   <div className="test-info">
-                    <div className="test-avatar test-avatar-purple">⚽</div>
+                    <div className="test-avatar test-avatar-purple"><Activity size={20} /></div>
                     <div className="test-meta">
                       <h4>TurfBook Reservation</h4>
                       <p>Arena Management & Booking</p>
@@ -370,7 +319,7 @@ export default function Landing() {
             
             <div className="about-features">
               <div className="glass-panel about-card">
-                <div className="about-icon">⚡</div>
+                <div className="about-icon"><Zap size={20} /></div>
                 <div className="about-info">
                   <h4>Hyper-Responsive Speeds</h4>
                   <p>We leverage React single page applications backed by Laravel controllers to guarantee minimal loading delays and instant updates.</p>
@@ -378,7 +327,7 @@ export default function Landing() {
               </div>
               
               <div className="glass-panel about-card">
-                <div className="about-icon">🔒</div>
+                <div className="about-icon"><Lock size={20} /></div>
                 <div className="about-info">
                   <h4>Secure By Design</h4>
                   <p>Utilizing clean migration tables, CSRF web tokens, and sanitized MySQL database schemas to ensure absolute security for customer accounts.</p>
@@ -386,7 +335,7 @@ export default function Landing() {
               </div>
               
               <div className="glass-panel about-card">
-                <div className="about-icon">📊</div>
+                <div className="about-icon"><BarChart3 size={20} /></div>
                 <div className="about-info">
                   <h4>Data-Driven Dashboards</h4>
                   <p>Our solutions embed clean data analytics with graphs, charts, and metrics to give business operators an edge.</p>
@@ -466,111 +415,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Careers Section */}
-      <section id="careers" className="section-padding">
-        <div className="container">
-          <div className="section-header">
-            <h2>Join <span class="gradient-text">Our Lab</span></h2>
-            <p>We are searching for talented engineers who love building high-performance systems and clean digital designs.</p>
-          </div>
-          
-          <div className="careers-grid">
-            <div className="careers-list">
-              {/* Position 1 */}
-              <div className={`glass-panel career-item ${expandedCareer === 'laravel' ? 'expanded' : ''}`}>
-                <div className="career-header" onClick={() => handleCareerToggle('laravel')}>
-                  <div>
-                    <h4 className="career-title">Senior Laravel Systems Engineer</h4>
-                    <div className="career-meta">Full-Time • Remote (India) • 4-6 Years Exp</div>
-                  </div>
-                  <div className="career-chevron">❯</div>
-                </div>
-                <div className="career-body">
-                  <div className="job-details">
-                    <p>Help structure the core database layers, multi-tenant managers, REST API integrations, and secure billing routines behind Vynkra business tools.</p>
-                    <div className="job-requirements">
-                      <label>Required Skillsets:</label>
-                      <ul>
-                        <li>Strong knowledge of Laravel 10/11 ecosystem, queues, and query optimization.</li>
-                        <li>Experience building and scaling multi-tenant software databases (MySQL/PostgreSQL).</li>
-                        <li>Familiarity with Inertia.js integrations and React setups.</li>
-                      </ul>
-                    </div>
-                    <button 
-                      className="btn btn-primary btn-sm btn-apply" 
-                      style={{ marginTop: '10px', alignSelf: 'flex-start' }}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        openApplyModal('Senior Laravel Systems Engineer');
-                      }}
-                    >
-                      Apply Now
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Position 2 */}
-              <div className={`glass-panel career-item ${expandedCareer === 'react' ? 'expanded' : ''}`}>
-                <div className="career-header" onClick={() => handleCareerToggle('react')}>
-                  <div>
-                    <h4 className="career-title">Frontend React Engineer (Inertia JS)</h4>
-                    <div className="career-meta">Full-Time • Remote (India) • 2-4 Years Exp</div>
-                  </div>
-                  <div className="career-chevron">❯</div>
-                </div>
-                <div className="career-body">
-                  <div className="job-details">
-                    <p>Craft responsive, elegant, and high-contrast user interfaces for the TurfBook arena schedules and Hardware shop inventory graphs.</p>
-                    <div className="job-requirements">
-                      <label>Required Skillsets:</label>
-                      <ul>
-                        <li>Highly skilled in React 18, React hooks, state machines, and dynamic structures.</li>
-                        <li>Deep understanding of CSS variables, custom styling systems, and layout principles.</li>
-                        <li>Experience linking frontend pages via Inertia.js with Laravel models.</li>
-                      </ul>
-                    </div>
-                    <button 
-                      className="btn btn-primary btn-sm btn-apply" 
-                      style={{ marginTop: '10px', alignSelf: 'flex-start' }}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        openApplyModal('Frontend React Engineer (Inertia JS)');
-                      }}
-                    >
-                      Apply Now
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="glass-panel careers-promo">
-              <h3>Empowering Creative Growth</h3>
-              <p>We work in dynamic cycles with minimal administrative blockades, giving you freedom to architect systems and directly influence software builds. Check out the standard perks of working with our core crew:</p>
-              
-              <div className="benefit-grid">
-                <div className="benefit-card">
-                  <h4>Flexible Hours</h4>
-                  <p>Collaborate asynchronously with flexible core times.</p>
-                </div>
-                <div className="benefit-card">
-                  <h4>Hardware Allocation</h4>
-                  <p>Receive top-tier work setups and modern screen accessories.</p>
-                </div>
-                <div className="benefit-card">
-                  <h4>Learning Subsidies</h4>
-                  <p>Full funding for tech courses, masterclasses, and web seminars.</p>
-                </div>
-                <div className="benefit-card">
-                  <h4>Wellness Stipend</h4>
-                  <p>Enjoy annual allowances for mental health or gym clubs.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Contact Us Section */}
       <section id="contact" className="section-padding" style={{ background: 'rgba(5, 7, 12, 0.4)', borderTop: '1px solid var(--glass-border)' }}>
@@ -584,7 +429,7 @@ export default function Landing() {
               </div>
               
               <div className="glass-panel contact-card">
-                <div className="contact-card-icon">✉️</div>
+                <div className="contact-card-icon"><Mail size={20} /></div>
                 <div className="contact-card-info">
                   <h4>Technical Inquiries</h4>
                   <p>support@vynkra.com</p>
@@ -592,7 +437,7 @@ export default function Landing() {
               </div>
               
               <div className="glass-panel contact-card">
-                <div className="contact-card-icon">📍</div>
+                <div className="contact-card-icon"><MapPin size={20} /></div>
                 <div className="contact-card-info">
                   <h4>Innovation Lab Address</h4>
                   <p>Vynkra Tech Hub, Cyber City, Bangalore, India</p>
@@ -659,80 +504,11 @@ export default function Landing() {
 
       <Footer />
 
-      {/* Interactive Career Application Modal */}
-      <div className={`modal ${isModalOpen ? 'active' : ''}`} id="careerModal">
-        <div className="modal-overlay" onClick={closeApplyModal}></div>
-        <div className="glass-panel modal-content">
-          <button className="modal-close" aria-label="Close Modal" onClick={closeApplyModal}>&times;</button>
-          <h3 style={{ fontSize: '1.85rem', marginBottom: '8px' }}>Apply for Role</h3>
-          <p style={{ color: 'var(--text-secondary)', marginBottom: '24px' }}>Applying for: <span id="jobAppliedLabel" className="gradient-text" style={{ fontWeight: 700 }}>{jobApplied}</span></p>
-          
-          <form id="applyForm" onSubmit={handleApplySubmit}>
-            <div className="form-group">
-              <input 
-                type="text" 
-                id="applicantName" 
-                className="form-input" 
-                placeholder=" " 
-                required
-                value={applicantName}
-                onChange={(e) => setApplicantName(e.target.value)}
-              />
-              <label htmlFor="applicantName" className="form-label">Full Name</label>
-            </div>
-            
-            <div className="form-group">
-              <input 
-                type="email" 
-                id="applicantEmail" 
-                className="form-input" 
-                placeholder=" " 
-                required
-                value={applicantEmail}
-                onChange={(e) => setApplicantEmail(e.target.value)}
-              />
-              <label htmlFor="applicantEmail" className="form-label">Email Address</label>
-            </div>
-            
-            <div className="form-group">
-              <input 
-                type="text" 
-                id="applicantGithub" 
-                className="form-input" 
-                placeholder=" "
-                value={applicantGithub}
-                onChange={(e) => setApplicantGithub(e.target.value)}
-              />
-              <label htmlFor="applicantGithub" className="form-label">GitHub URL (Optional)</label>
-            </div>
-            
-            <div className="form-group">
-              <textarea 
-                id="applicantPitch" 
-                className="form-input" 
-                placeholder=" " 
-                required
-                value={applicantPitch}
-                onChange={(e) => setApplicantPitch(e.target.value)}
-              ></textarea>
-              <label htmlFor="applicantPitch" className="form-label">Introduce Yourself</label>
-            </div>
-            
-            <button 
-              type="submit" 
-              className="btn btn-primary" 
-              style={{ width: '100%' }}
-              disabled={isApplySubmitting}
-            >
-              {isApplySubmitting ? 'Transmitting Application...' : 'Transmit Application'}
-            </button>
-          </form>
-        </div>
-      </div>
+
 
       {/* Success Toast Notification */}
       <div className={`toast ${toast.active ? 'active' : ''}`} id="toastNotification">
-        <div className="toast-icon">✓</div>
+        <div className="toast-icon"><Check size={16} strokeWidth={3} /></div>
         <div className="toast-info">
           <h5>{toast.title}</h5>
           <p>{toast.desc}</p>

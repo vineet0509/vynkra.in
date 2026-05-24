@@ -63,7 +63,6 @@ export default function Header() {
               <a href="#sandbox" className="nav-link" onClick={() => handleLinkClick('#sandbox')}>Sandbox</a>
               <a href="#about" className="nav-link" onClick={() => handleLinkClick('#about')}>About Us</a>
               <a href="#blogs" className="nav-link" onClick={() => handleLinkClick('#blogs')}>Blogs</a>
-              <a href="#careers" className="nav-link" onClick={() => handleLinkClick('#careers')}>Careers</a>
               <a href="#contact" className="nav-link" onClick={() => handleLinkClick('#contact')}>Contact</a>
             </>
           ) : (
@@ -73,7 +72,6 @@ export default function Header() {
               <Link to="/#sandbox" className="nav-link">Sandbox</Link>
               <Link to="/#about" className="nav-link">About Us</Link>
               <Link to="/#blogs" className="nav-link">Blogs</Link>
-              <Link to="/#careers" className="nav-link">Careers</Link>
               <Link to="/#contact" className="nav-link">Contact</Link>
             </>
           )}
