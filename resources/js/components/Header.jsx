@@ -39,19 +39,7 @@ export default function Header() {
     <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <Link to="/" className="logo" onClick={() => handleLinkClick('#home')}>
-          <div className="logo-icon">
-            <svg viewBox="0 0 100 100">
-              <defs>
-                <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#ffffff" />
-                  <stop offset="100%" stopColor="#a5b4fc" />
-                </linearGradient>
-              </defs>
-              <path d="M25,25 L45,75 H55 L75,25 L63,25 L50,60 L37,25 Z" fill="url(#logoGrad)" />
-              <circle cx="50" cy="60" r="4" fill="#06b6d4" />
-              <line x1="20" y1="25" x2="80" y2="25" stroke="white" strokeWidth="3" opacity="0.3" />
-            </svg>
-          </div>
+          <img src="/logo.png" alt="Vynkra Technologies" style={{ height: '42px', width: '42px', borderRadius: '10px', objectFit: 'cover' }} />
           <span>VYNKRA</span>
         </Link>
         

@@ -19,11 +19,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <Link to="/" className="logo" onClick={() => handleLinkClick('#home')}>
-              <div className="logo-icon" style={{ width: '32px', height: '32px' }}>
-                <svg viewBox="0 0 100 100">
-                  <path d="M25,25 L45,75 H55 L75,25 L63,25 L50,60 L37,25 Z" fill="white" />
-                </svg>
-              </div>
+              <img src="/logo.png" alt="Vynkra Technologies" style={{ height: '36px', width: '36px', borderRadius: '8px', objectFit: 'cover' }} />
               <span style={{ fontSize: '1.25rem' }}>VYNKRA</span>
             </Link>
             <p>Designing modern enterprise tools and multi-tenant operational applications that simplify work.</p>

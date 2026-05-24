@@ -10,6 +10,9 @@
     <meta name="author" content="Vynkra Technologies">
     <meta name="robots" content="index, follow">
     
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="shortcut icon" href="/favicon.ico">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Vynkra Technologies">
