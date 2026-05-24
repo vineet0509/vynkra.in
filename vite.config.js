@@ -35,9 +35,7 @@ export default defineConfig(({ mode }) => {
         },
 
         build: {
-            manifest: true,
             outDir: 'build',
-            emptyOutDir: true,
         },
 
         base: basePath,
