@@ -41,7 +41,7 @@
     
     <!-- Twitter Cards -->
     <meta property="twitter:card" content="summary">
-    <meta property="twitter:site" content="@vynkra">
+    <meta property="twitter:site" content="@@vynkra">
     <meta property="twitter:title" content="Vynkra Technologies | Make Your Business Easier">
     <meta property="twitter:description" content="Elite enterprise software, automated inventory management, and multi-tenant operational booking systems.">
     <meta property="twitter:image" content="https://vynkra.in/logo.png">
@@ -49,8 +49,8 @@
     <!-- Rich Structured Schema Data (JSON-LD) for Google Knowledge Graph -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "Organization",
+      "@@context": "https://schema.org",
+      "@@type": "Organization",
       "name": "Vynkra Technologies",
       "alternateName": "Vynkra",
       "url": "https://vynkra.in",
@@ -59,13 +59,13 @@
       "slogan": "Make Your Business Easier",
       "foundingDate": "2026",
       "address": {
-        "@type": "PostalAddress",
+        "@@type": "PostalAddress",
         "addressLocality": "Bangalore",
         "addressRegion": "Karnataka",
         "addressCountry": "IN"
       },
       "contactPoint": {
-        "@type": "ContactPoint",
+        "@@type": "ContactPoint",
         "email": "support@vynkra.com",
         "contactType": "technical support",
         "availableLanguage": ["en"]
@@ -77,13 +77,13 @@
     </script>
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
+      "@@context": "https://schema.org",
+      "@@type": "WebSite",
       "name": "Vynkra Technologies",
       "alternateName": "Vynkra",
       "url": "https://vynkra.in",
       "potentialAction": {
-        "@type": "SearchAction",
+        "@@type": "SearchAction",
         "target": "https://vynkra.in/#sandbox?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
